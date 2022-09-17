@@ -33,3 +33,17 @@ The pybind11 code is in [python/pybind11-numpy-example_python.cpp](https://githu
 The scripts used to generate the above plots are in [scripts](https://github.com/ssciwr/pybind11-numpy-example/tree/main/scripts).
 
 This repo was quickly set up using the SSC [C++ Project Cookiecutter](https://github.com/ssciwr/cookiecutter-cpp-project).
+
+
+## Bug:
+
+Install and activate environment with conda via:
+
+```sh
+conda create --prefix .conda python pybind11 cmake compilers
+conda activate .conda
+python setup.py build
+python setup.py install
+python -c "import pybind11numpyexample"
+```
+Last command exits with the message `Killed: 9`.
