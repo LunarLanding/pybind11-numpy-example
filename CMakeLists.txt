@@ -29,18 +29,19 @@ add_subdirectory(src)
 # compile the tests
 include(CTest)
 if(BUILD_TESTING)
-  add_subdirectory(ext/Catch2)
-  include(./ext/Catch2/contrib/Catch.cmake)
+  find_package(Catch2 3 REQUIRED)
+  include(Catch)
   add_subdirectory(tests)
 endif()
 
 if(BUILD_DOCS)
   # Add the documentation
+
   add_subdirectory(doc)
 endif()
 if(BUILD_PYTHON)
   # Add Python bindings
-  add_subdirectory(ext/pybind11)
+  find_package(pybind11)
 
   add_subdirectory(python)
 endif()
