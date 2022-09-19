@@ -46,3 +46,4 @@ python setup.py build
 python setup.py install
 python -c "import pybind11numpyexample"
 ```
+Last command exits with the message `Killed: 9`.
